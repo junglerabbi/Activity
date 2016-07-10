@@ -1,0 +1,10 @@
+.head_header{
+	width:100%;
+	height:50px;
+}
+
+.head_content{
+	background-image: url(../img/index/header-bg.jpg);
+	height:550px;
+	width: 100%;
+}
