@@ -1,0 +1,120 @@
+
+.head{
+	background-image: url(../img/index/header-bg.jpg);
+	height:600px;
+	width: 100%;
+}
+.head_header{
+    width:100%;
+}
+/* menu */
+.navbar{
+    background-color: rgba(255,255,255,0.4);
+}
+.default-logo {
+    font-family: "Playball",cursive;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    line-height: 40px;
+}
+
+.default-menu.navbar-default .navbar-nav > li > a{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 40px !important;
+    font-family: "Raleway",sans-serif;
+    letter-spacing: 0.3px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+.default-menu.navbar-default .navbar-nav > li > a:hover{
+    color:green;
+}
+.default-menu.navbar-default .navbar-nav > .active > a, 
+.default-menu.navbar-default .navbar-nav > .active > a:focus, 
+.default-menu.navbar-default .navbar-nav > .active > a:hover{
+    background-color: transparent;
+    color: #8FC93F;
+}
+
+.default-menu.menu{
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.default-menu.menu .default-logo{
+    color: #ccc;
+}
+
+.default-menu.menu .navbar-nav > li > a{
+    color: #ccc;
+}
+
+.default-menu.menu .navbar-nav > li > a:before,
+.default-menu.menu .navbar-nav > li > a:after{
+    color: transparent;
+    font-size: 13px;
+    position: absolute;
+    transition: all 0.5s ease-in-out; 
+    margin-top: -1px;
+}
+
+.default-menu.menu .navbar-nav > li > a:before{
+    content: '[';
+    left: -10px;
+}
+
+.default-menu.menu .navbar-nav > li > a:after{
+    content: ']';
+    right: -10px;
+}
+
+.default-menu.menu .navbar-nav > li > a:hover:after,
+.default-menu.menu .navbar-nav > li > a:hover:before{
+    color: #8FC93F; 
+}
+
+.default-menu.menu .navbar-nav > li > a:hover:before{
+    left: 8px;
+}
+
+.default-menu.menu .navbar-nav > li > a:hover:after{
+    right: 8px;
+}
+
+.default-menu.navbar-default .navbar-nav > li:last-child > a:after,
+.default-menu.navbar-default .navbar-nav > li:last-child > a:before{
+    content: '';
+}
+.head_content{
+    width:100%;
+    min-height: 300px;
+}
+.announce{
+  width:400px;
+  height:300px;
+  margin:100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.item{
+    text-align: center;
+}
+.item h4{
+    color:white;
+    font-family: "微软雅黑";
+    font-size: 30px;
+    font-weight: bold;
+}
+.item p{
+    height:150px; 
+    width:300px;
+    margin:0 50px 0 50px;
+    color:white;
+    font-size: 15px;
+}
+.carousel-indicators{
+    color:lightgreen;
+}
