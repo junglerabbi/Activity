@@ -3,6 +3,7 @@
 	background-image: url(../img/index/header-bg.jpg);
 	height:600px;
 	width: 100%;
+    background-repeat: no-repeat;
 }
 .head_header{
     width:100%;
@@ -117,4 +118,39 @@
 }
 .carousel-indicators{
     color:lightgreen;
+}
+
+
+/*===== content部分 ====*/
+.content{
+    padding-bottom: 55px;
+    padding-top: 80px;
+    border: 1px solid #eee;
+    position: relative;
+    margin-bottom: 45px;
+}
+.small-tag {
+    color: green;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+h2.section-title{
+    text-transform: uppercase;
+    color: #8FC93F;
+    margin-bottom: 30px;
+    word-spacing: 5px; 
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "微软雅黑";  
+}
+.section-para{
+    color: #999;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
 }

@@ -1,9 +1,9 @@
 
 .head{
 	background-image: url(../img/index/header-bg.jpg);
-    background-repeat: no-repeat;
 	height:600px;
 	width: 100%;
+    background-repeat: no-repeat;
 }
 .head_header{
     width:100%;
@@ -118,27 +118,4 @@
 }
 .carousel-indicators{
     color:lightgreen;
-}
-#change_announce{
-    margin:50px auto;
-    width:600px;
-    height:600px;
-}
-.modal-header{
-    min-height: 50px;
-}
-.modal-body{
-    min-height: 300px;
-}
-.input-group-title{
-    margin:20px auto;
-    width:400px;
-}
-.input-group-body{
-    width:400px;
-    margin:0 auto;
-}
-.input-group-body textarea{
-    height:100px;
-    resize: none;
 }
