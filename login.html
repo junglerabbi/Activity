@@ -69,7 +69,16 @@
 
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/login_register.js"></script>
+<script type="text/javascript">
+	var goto_register = function(){
+		$("#login_input").css("display","none");
+		$("#register_input").css("display","block");
+	}
+	var goto_login = function(){
+		$("#login_input").css("display","block");
+		$("#register_input").css("display","none");
+	}
+</script>
 
 </body>
 </html>
