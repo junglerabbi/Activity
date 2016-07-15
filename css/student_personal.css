@@ -9,6 +9,8 @@ body{
 	position: relative;
 	margin-top: 50px;
 	margin-left: 20px;
+	width:350px;
+	border-bottom: 2px #aaa solid;
 }
 #personal{
 	position: relative;
@@ -45,10 +47,13 @@ body{
 }
 .infor-item{
 	width:600px;
-	border:1px green solid;
 	margin:0 auto 20px;
 	padding:10px;
 	color:#121212;
+	transition:background-color 1.5s;
+}
+.infor-item:hover{
+	background-color: rgba(143,201,63,0.2);
 }
 .infor_person{
 	color:red;
@@ -77,8 +82,8 @@ body{
 }
 .join-item{
 	width:600px;
-	border:1px green solid;
 	margin:0 auto 20px;
 	padding:10px;
 	color:#121212;
+	background-color: rgba(143,201,63,0.2);
 }
