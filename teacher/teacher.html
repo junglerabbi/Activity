@@ -5,6 +5,7 @@
 <title>哈工大学生活动信息平台-教师页</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../css/teacher.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css">
 </head>
 <body>
 	<section class="head">
@@ -19,8 +20,9 @@
 						<ul class="nav navbar-nav" id="logged">
 							<li><a class="scroll" href="teacher.html">首页</a></li>
 							<li><a class="scroll" href="#event">管理活动</a></li>
+							<li><a class="scroll" href="javascript:void(0);" data-toggle="modal" data-target="#start_activity" >发布活动</a></li>
 							<li><a class="scroll" href="javascript:void(0);" data-toggle="modal" data-target="#change_announce">修改公告</a></li>
-							<li><a class="scroll" href="javascript:void(0);">通知</a></li>
+							<li><a class="scroll" href="teacher_personal.html">通知</a></li>
 							<li><a class="scroll" href="javascript:void(0);">退出登录</a></li>
 							<li></li>
 						</ul>
@@ -31,7 +33,7 @@
 					</div>
 				</div>
 			</div><!-- end导航-->
-			<!--修改公告模态框-->
+			<!--修改公告模态框开始-->
 			<div id="change_announce" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="change_modal" aria-hidden="true" data-backdrop="true">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -94,7 +96,39 @@
 					</div>
 				</div>
 			</div>
-			<!--模态框结束-->
+			<!--修改公告模态框结束-->
+
+			<!--发布活动模态框开始-->
+			<div class="modal fade" id="start_activity" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">发布公告面板</h4>
+						</div>
+						<div class="modal-body" id="start_modal">
+							<div class="input-group input-group-title">
+								<span class="input-group-addon">活动标题</span>
+								<input type="text" id="activity_title" class="form-control" placeholder="请输入活动的标题">
+							</div>
+
+							<span class="time">开始时间：<input type="text" placeholder="请点击来确定时间" value="" id="start_time" data-date-format="yyyy-mm-dd" class="form_datetime"></span>
+							<span class="time">截止日期：<input type="text" placeholder="请点击来确定时间" value="" id="end_time" data-date-format="yyyy-mm-dd" class="form_datetime"></span>
+							<span class="time">报名截止：<input type="text" placeholder="请点击来确定时间" value="" id="end_join" data-date-format="yyyy-mm-dd" class="form_datetime"></span><br/>
+							
+							<div class="input-group input-group-body">
+								<span class="input-group-addon">活动详介</span>
+								<textarea id="activity_content" class="form-control" placeholder="请输入活动详细内容、介绍等"></textarea>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							<button type="button" class="btn btn-success">发布</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--发布活动模态框结束-->
 		</div>
 		<!--滚动公告-->
 		<div class="head_content" id="head_content">
@@ -150,6 +184,36 @@
 	</section>
 <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+	$('#start_time').datetimepicker({
+  	   language:  'zh-CN',
+        weekStart: 1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+  });
+  $('#end_time').datetimepicker({
+  	   language:  'zh-CN',
+        weekStart: 1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+  });
+  $('#end_join').datetimepicker({
+  	   language:  'zh-CN',
+        weekStart: 1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+  });
+</script>
 </body>
 </html>

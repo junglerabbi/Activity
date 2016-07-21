@@ -24,12 +24,16 @@ body{
 }
 .article a{
 	text-decoration: none;
+	font-size: 16px;
+	color:;
 }
 .article_title{
 	font-family: "微软雅黑";
 	font-size: 28px;
 	color:#121212;
 	margin-bottom: 30px;
+	display:inline-block; 
+	margin-right: 20px;
 }
 .time{
 	display:inline-block;
@@ -42,4 +46,15 @@ body{
 	letter-spacing: 1px;
 	font-family: "微软雅黑";
 	font-size: 15px;
+}
+
+#join_file{
+	display:inline;
+	border:1px #aaa solid;
+	margin-left: 15px;
+}
+.upload{
+	display:block;
+	margin-left: 600px;
+	margin-top: 50px;
 }

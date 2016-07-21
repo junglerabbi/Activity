@@ -142,6 +142,21 @@
     height:100px;
     resize: none;
 }
+#start_modal{
+    padding:0 50px 0;
+}
+#activity_title{
+    width:400px;
+}
+.time{
+    display:block;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+#activity_content{
+    resize:none;
+    width:400px;
+}
 
 /*===== content部分 ====*/
 .content{

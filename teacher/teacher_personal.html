@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>学生活动信息平台-个人中心</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/teacher_personal.css">
+<link rel="stylesheet" type="text/css" href="../css/pickList.css">
+</head>
+
+<body>
+	<section class="locate">
+		<span>您现在的位置：</span><a href="teacher.html">首页</a><span>——&gt;</span><a href="teacher_personal.html">个人中心</a>
+	</section>
+	<section id="personal">
+		<!--个人中心左侧-->
+		<div class="personal_left">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="#information" data-toggle="tab">查看通知</a></li>
+   				<li class="list-group-item"><a href="#send" data-toggle="tab">发送通知</a></li>
+   				<li class="list-group-item"><a href="#changePassword" data-toggle="tab">修改密码</a></li>
+			</ul>
+		</div>
+		<!--个人中心左侧结束-->
+
+		<!--个人中心右侧-->
+		<div class="personal_right">
+			<div class="tab-content">
+				<!--个人中心通知部分-->
+				<div class="tab-pane fade in active" id="information">
+					<div class="infor-item">
+						<p class="infor_person">通知人：周玉</p>
+						<p class="infor_time">通知时间：2016-7-17</p>
+						<p class="infor_content">内容：大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习大连实习</p>
+						<button class="response btn btn-primary" data-toggle="modal" data-target="#response">回复</button>
+					</div>
+
+					<!--回复框-->
+					<div class="modal fade" id="response" tebindex="-1" role="dialog" aria-labelledby="responseModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								</div>
+								<div class="modal-body">
+									<textarea class="form-control response_input" placeholder="在这里输入要回复的信息"></textarea>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+									<button type="button" class="btn btn-primary">发送</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--回复框结束-->
+				</div>
+				<!--个人中心通知部分结束-->
+
+				<!--个人中心参与活动部分-->
+				<div class="tab-pane fade" id="send">
+					<div class="container">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">PickList Demo</h3>
+							</div>
+							<div class="panel-body">
+								<div id="pickList"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--个人中心参与部分结束-->
+
+				<!--个人中心修改密码部分-->
+				<div class="tab-pane fade" id="changePassword">
+					<input type="password" placeholder="请输入新密码" class="password1 form-control">
+					<input type="password" placeholder="请确认新密码" class="password2 form-control">
+					<button class="btn btn-success">确定</button>
+				</div>
+				<!--个人中心修改密码结束-->
+
+			</div>
+		</div>
+		<!--个人中心右侧结束-->
+
+	</section>
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/pickList.js"></script>
+<script type="text/javascript">
+	var val = {
+            01: {id: 01, text: 'Isis'},
+            02: {id: 02, text: 'Sophia'},
+            03: {id: 03, text: 'Alice'},
+            04: {id: 04, text: 'Isabella'},
+            05: {id: 05, text: 'Manuela'},
+            06: {id: 06, text: 'Laura'},
+            07: {id: 07, text: 'Luiza'},
+            08: {id: 08, text: 'Valentina'},
+            09: {id: 09, text: 'Giovanna'},
+            10: {id: 10, text: 'Maria Eduarda'},
+            11: {id: 11, text: 'Helena'},
+            12: {id: 12, text: 'Beatriz'},
+            13: {id: 13, text: 'Maria Luiza'},
+            14: {id: 14, text: 'Lara'},
+            15: {id: 15, text: 'Julia'}
+         };
+         var pick = $("#pickList").pickList({data: val});
+</script>
+</body>
+</html>
