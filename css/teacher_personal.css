@@ -87,3 +87,22 @@ body{
 	color:#121212;
 	background-color: rgba(143,201,63,0.2);
 }
+.send_table{
+	width:800px;
+	margin:0 auto;
+}
+.list1_td{
+	width:250px;
+}
+.list1{
+	width:250px;
+}
+.button_td{
+	width:150px;
+}
+.list2_td{
+	width:300px;
+}
+.list2{
+	width:250px;
+}

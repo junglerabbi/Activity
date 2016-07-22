@@ -56,20 +56,40 @@
 				</div>
 				<!--个人中心通知部分结束-->
 
-				<!--个人中心参与活动部分-->
+				<!--个人中心发送通知部分-->
 				<div class="tab-pane fade" id="send">
-					<div class="container">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h3 class="panel-title">PickList Demo</h3>
-							</div>
-							<div class="panel-body">
-								<div id="pickList"></div>
-							</div>
-						</div>
-					</div>
+					<form name="myform"> 
+						<table class="send_table"> 
+							<tr> 
+								<td class="list1_td"> 
+									<select multiple name="list1" class="list1 form-control" ondblclick="moveOption(document.myform.list1, document.myform.list2)">
+										<!--用forEach遍历出所有的option-->
+										<option value="北京">北京</option> 
+										<option value="上海">上海</option> 
+										<option value="山东">山东</option> 
+										<option value="安徽">安徽</option> 
+										<option value="重庆">重庆</option> 
+										<option value="福建">福建</option> 
+									</select> 
+								</td> 
+								<td class="button_td">
+									<input type="button" value="添加" onclick="moveOption(document.myform.list1, document.myform.list2)" class="btn btn-primary list_button">
+									<input type="button" value="全部添加" onclick="moveAllOption(document.myform.list1, document.myform.list2)" class="btn btn-primary list_button"><br/> 
+									<input type="button" value="移除" onclick="moveOption(document.myform.list2, document.myform.list1)" class="btn btn-primary list_button">
+									<input type="button" value="全部移除" onclick="moveAllOption(document.myform.list2, document.myform.list1)" class="btn btn-primary list_button"><br/>
+								</td> 
+								<td class="list2_td"> 
+									<select multiple name="list2" class="list2 form-control" ondblclick="moveOption(document.myform.list2, document.myform.list1)"> 
+									</select> 
+								</td> 
+								<td class="content_td">
+									<textarea class="form-control"></textarea>
+								</td>
+							</tr> 
+						</table> 
+					</form> 
 				</div>
-				<!--个人中心参与部分结束-->
+				<!--个人中心发送通知结束-->
 
 				<!--个人中心修改密码部分-->
 				<div class="tab-pane fade" id="changePassword">
@@ -88,24 +108,51 @@
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/pickList.js"></script>
 <script type="text/javascript">
-	var val = {
-            01: {id: 01, text: 'Isis'},
-            02: {id: 02, text: 'Sophia'},
-            03: {id: 03, text: 'Alice'},
-            04: {id: 04, text: 'Isabella'},
-            05: {id: 05, text: 'Manuela'},
-            06: {id: 06, text: 'Laura'},
-            07: {id: 07, text: 'Luiza'},
-            08: {id: 08, text: 'Valentina'},
-            09: {id: 09, text: 'Giovanna'},
-            10: {id: 10, text: 'Maria Eduarda'},
-            11: {id: 11, text: 'Helena'},
-            12: {id: 12, text: 'Beatriz'},
-            13: {id: 13, text: 'Maria Luiza'},
-            14: {id: 14, text: 'Lara'},
-            15: {id: 15, text: 'Julia'}
-         };
-         var pick = $("#pickList").pickList({data: val});
+<!--操作全部-->
+function moveAllOption(e1, e2){ 
+	var fromObjOptions=e1.options; 
+	for(var i=0;i<fromObjOptions.length;i++){ 
+		fromObjOptions[0].selected=true; 
+		e2.appendChild(fromObjOptions[i]); 
+		i--; 
+	} 
+	document.myform.city.value=getvalue(document.myform.list2); 
+}
+
+<!--操作单个-->
+function moveOption(e1, e2){ 
+	var fromObjOptions=e1.options; 
+	for(var i=0;i<fromObjOptions.length;i++){ 
+		if(fromObjOptions[i].selected){ 
+			e2.appendChild(fromObjOptions[i]); 
+			i--; 
+		} 
+	} 
+	document.myform.city.value=getvalue(document.myform.list2); 
+} 
+
+function getvalue(geto){ 
+	var allvalue = ""; 
+	for(var i=0;i<geto.options.length;i++){ 
+		allvalue +=geto.options[i].value + ","; 
+	} 
+	return allvalue; 
+} 
+
+function changepos1111(obj,index) 
+{ 
+	if(index==-1){ 
+		if (obj.selectedIndex>0){ 
+			obj.options(obj.selectedIndex).swapNode(obj.options(obj.selectedIndex-1)) 
+		} 
+	} 
+	else if(index==1){ 
+		if (obj.selectedIndex<obj.options.length-1){ 
+			obj.options(obj.selectedIndex).swapNode(obj.options(obj.selectedIndex+1)) 
+		} 
+	} 
+} 
+
 </script>
 </body>
 </html>
