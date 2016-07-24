@@ -2,7 +2,7 @@
 .head{
 	background-image: url(../img/index/header-bg.jpg);
 	height:600px;
-	width: 100%;
+	background-size: 100%;
     background-repeat: no-repeat;
 }
 .head_header{
