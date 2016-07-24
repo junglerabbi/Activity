@@ -1,8 +1,7 @@
-
 .head{
 	background-image: url(../img/index/header-bg.jpg);
     background-repeat: no-repeat;
-	height:600px;
+	min-height:600px;
 	background-size: 100%;
 }
 .head_header{
