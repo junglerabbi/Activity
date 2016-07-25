@@ -1,15 +1,11 @@
-
-/*===== head部分 ====*/
 .head{
-	background-image: url(../img/index/header-bg.jpg);
-	height:600px;
-	width: 100%;
+    background-image: url(../img/index/header-bg.jpg);
+    height:600px;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
-.head_header{
-    width:100%;
-}
-/* menu */
+
+/*导航*/
 .navbar{
     background-color: rgba(255,255,255,0.4);
 }
@@ -90,6 +86,7 @@
 .default-menu.navbar-default .navbar-nav > li:last-child > a:before{
     content: '';
 }
+
 .head_content{
     width:100%;
     min-height: 300px;
@@ -122,7 +119,6 @@
 }
 
 
-/*===== content部分 ====*/
 .content{
     padding-bottom: 55px;
     padding-top: 80px;
@@ -207,9 +203,6 @@ h2.section-title{
     font-size: 15px;
 }
 
-
-
-/*===== footer部分 ====*/
 .footer{
     margin-top: 150px;
     width:100%;
