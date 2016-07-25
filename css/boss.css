@@ -153,9 +153,6 @@ h2.section-title{
 }
 
 .eventlist{
-    width:800px;
-    height:180px;
-    margin:0 auto;
     background-color: rgba(153,153,153,0.1);
     transition:background-color 1.5s;
     transition:color 1.5s background-color 1.5s;
