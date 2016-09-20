@@ -27,6 +27,7 @@ body{
 	font-size: 16px;
 }
 
+
 .tab-pane{
 	border:1px #ccc solid;
 	background-color: rgba(255,251,240,0.6);
@@ -57,13 +58,8 @@ body{
 	color:blue;
 }
 .response{
-	background-color: gold;
-	border:gold;
 	margin-left: 520px;
 	margin-top: -10px;
-}
-.response:hover{
-	background-color: orange;
 }
 #response{
 	margin-top: 10%;
@@ -79,10 +75,22 @@ body{
 	width:600px;
 	margin:0 auto 20px;
 	padding:10px;
-	background-color: rgba(0,0,0,0.1);
-}
-.join-item{
-	font-size: 16px;
+	font-size: 14px;
 	color:#121212;
 	letter-spacing: 1px;
+	transition:background-color 1.5s;
+}
+.join-item:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+#changeInfo{
+	height:300px;
+}
+.changeInfo-item{
+	width:80%;
+	margin:0 auto 15px;
+}
+#changeInfo button{
+	float:right;
+	margin-top: 20px;
 }
