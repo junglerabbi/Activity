@@ -152,6 +152,9 @@
     margin-top: 15px;
     margin-left: 50px;
 }
+.form_datetime{
+    width:30%;
+}
 #activity_content{
     resize:none;
     width:400px;
@@ -256,4 +259,9 @@ h2.section-title{
 .copyright{
     color:#aaa;
     font-size: 10px;
+}
+
+/*===== 9-20添加部分 ====*/
+.start_time,.end_time,.start_time,.end_join{
+    display:inline-block;
 }

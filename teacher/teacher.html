@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/teacher.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-datetimepicker.min.css">
+	
 </head>
 <body>
 	<section class="head">
@@ -117,9 +118,17 @@
 								<input type="text" id="activity_title" class="form-control" placeholder="请输入活动的标题">
 							</div>
 
-							<span class="time">开始时间：<input type="text" placeholder="请点击来确定时间" value="" id="start_time" data-date-format="yyyy-mm-dd" class="form_datetime"></span>
-							<span class="time">截止日期：<input type="text" placeholder="请点击来确定时间" value="" id="end_time" data-date-format="yyyy-mm-dd" class="form_datetime"></span>
-							<span class="time">报名截止：<input type="text" placeholder="请点击来确定时间" value="" id="end_join" data-date-format="yyyy-mm-dd" class="form_datetime"></span><br/>
+							<div style="margin-bottom:15px;margin-left:10px;">
+								活动时间：<input type="text" placeholder="请点击来确定时间" value="" id="start_time" class="form_datetime">
+								至：<input type="text" placeholder="请点击来确定时间" value="" id="end_time" class="form_datetime"><br/>
+							</div>
+
+							<div style="margin-bottom:15px;margin-left:10px;">
+								报名时间：<input type="text" placeholder="请点击来确定时间" value="" id="start_join" class="form_datetime">
+								至：<input type="text" placeholder="请点击来确定时间" value="" id="end_join" class="form_datetime"><br/>
+							</div>
+							
+							
 							
 							<div class="input-group input-group-body">
 								<span class="input-group-addon">活动详介</span>
@@ -193,35 +202,60 @@
 	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-	<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
 	<script type="text/javascript">
 	$('#start_time').datetimepicker({
-		language:  'zh-CN',
+		language: 'zh-CN',
+		format: "yyyy-MM-dd hh:ii",
 		weekStart: 1,
 		autoclose: 1,
 		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
+		startView: 1,
+		minView: 1,
 		forceParse: 0,
-	});
+		todayBtn:true,
+	}).on("click",function(ev){
+    $("#start_time").datetimepicker("setEndDate", $("#end_time").val());
+});;
 	$('#end_time').datetimepicker({
 		language:  'zh-CN',
+		format: "yyyy-MM-dd hh:ii",
 		weekStart: 1,
 		autoclose: 1,
 		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
+		startView: 1,
+		minView: 1,
 		forceParse: 0,
-	});
+		todayBtn:true,
+	}).on("click", function (ev) {
+    $("#end_time").datetimepicker("setStartDate", $("#start_time").val());
+});;
+	$('#start_join').datetimepicker({
+		language:  'zh-CN',
+		format: "yyyy-MM-dd hh:ii",
+		weekStart: 1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 1,
+		forceParse: 0,
+		todayBtn:true,
+	}).on("click",function(ev){
+    $("#start_join").datetimepicker("setEndDate", $("#end_join").val());
+});
 	$('#end_join').datetimepicker({
 		language:  'zh-CN',
+		format: "yyyy-MM-dd hh:ii",
 		weekStart: 1,
 		autoclose: 1,
 		todayHighlight: 1,
-		startView: 2,
-		minView: 2,
+		startView: 1,
+		minView: 1,
 		forceParse: 0,
-	});
+		todayBtn:true,
+	}).on("click", function (ev) {
+    $("#end_join").datetimepicker("setStartDate", $("#start_join").val());
+});;
 	</script>
 </body>
 </html>
